@@ -93,6 +93,7 @@ Next, run NEMandIEM.py to generate a <code>sample1_ExactMatched_reads.csv</code>
 <code>python NEMandIEM.py</code>
 
 The final step in generating the counts is to use Bowtie to align the reads that were not exact matched to the sgRNA library. This data will be stored in the <code>Final_sgRNA_count.csv</code>:
+
 <code>python sgRNA_count.py</code>
 
 
