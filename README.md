@@ -82,11 +82,11 @@ Navigate to the count_generation directory:
 
 Firstly, Next Generation Sequencing reads should be trimmed from barcodes and 3’ and 5’ redundant sequences:
 
-<code>cutadapt -g ^NTAGT --discard-untrimmed --error-rate 0.2 --times 1 example/raw_sequencing_example.fastq -o example/Results/sample1.fastq;</code>
+<code>cutadapt -g ^NTAGT --discard-untrimmed --error-rate 0.2 --times 1 example/raw_sequencing_example.fastq.gz -o example/Results/sample1.fastq.gz;</code>
 
-<code>cutadapt -g GTAGACCGGGGTTCAATTCCCCGTCGCGGAGC --discard-untrimmed --overlap 18 --error-rate 0.2 --times 1 example/Results/sample1.fastq -o example/Results/sample1_5ptrimmed.fastq;</code>
+<code>cutadapt -g GTAGACCGGGGTTCAATTCCCCGTCGCGGAGC --discard-untrimmed --overlap 18 --error-rate 0.2 --times 1 example/Results/sample1.fastq.gz -o example/Results/sample1_5ptrimmed.fastq.gz;</code>
 
-<code>cutadapt -a GTTTTAGAGCTAGAAATAGC  --discard-untrimmed --overlap 9 --error-rate 0.2 --times 1 example/Results/sample1_5ptrimmed.fastq -o example/Results/sample1_5ptrimmed_3ptrimmed.fastq;</code>
+<code>cutadapt -a GTTTTAGAGCTAGAAATAGC  --discard-untrimmed --overlap 9 --error-rate 0.2 --times 1 example/Results/sample1_5ptrimmed.fastq.gz -o example/Results/sample1_5ptrimmed_3ptrimmed.fastq.gz;</code>
 
 Next, run NEMandIEM.py to generate a <code>sample1_ExactMatched_reads.csv</code> file with the number of exact matched counts of the sgRNAs in the library as well as an additional <code>sample1_unmatched_reads.csv</code> file of the reads that were not matched to the library.
 
