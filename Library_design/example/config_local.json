@@ -1,0 +1,13 @@
+{
+  "PATH": {
+    "PRIMER3": "./primer3_core",
+    "BOWTIE": "bowtie/bowtie",
+    "TWOBITTOFA": "./twoBitToFa",
+    "TWOBIT_INDEX_DIR": "GS115",
+    "BOWTIE_INDEX_DIR": "GS115",
+    "ISOFORMS_INDEX_DIR": "GS115",
+    "ISOFORMS_MT_DIR": "GS115",
+    "GENE_TABLE_INDEX_DIR": "GS115"
+  },
+  "THREADS": 1
+}
