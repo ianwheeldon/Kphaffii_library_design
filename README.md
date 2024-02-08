@@ -88,14 +88,12 @@ Firstly, Next Generation Sequencing reads should be trimmed from barcodes and 3â
 
 <code>cutadapt -a GTTTTAGAGCTAGAAATAGC  --discard-untrimmed --overlap 9 --error-rate 0.2 --times 1 example/Results/sample1_5ptrimmed.fastq.gz -o example/Results/sample1_5ptrimmed_3ptrimmed.fastq.gz;</code>
 
-<code>gzip -dk example/Results/sample1_5ptrimmed_3ptrimmed.fastq.gz example/Results/</code>
-
-Next, run <code>NEMandIEM.py</code> to generate a <code>sample1_ExactMatched_reads.csv</code> file with the number of exact matched counts of the sgRNAs in the library as well as an additional <code>sample1_unmatched_reads.csv</code> file of the reads that were not matched to the library.
+Next, run NEMandIEM.py to generate a <code>sample1_ExactMatched_reads.csv</code> file with the number of exact matched counts of the sgRNAs in the library as well as an additional <code>sample1_unmatched_reads.csv</code> file of the reads that were not matched to the library.
 
 <code>python NEMandIEM.py</code>
 
 The final step in generating the counts is to use Bowtie to align the reads that were not exact matched to the sgRNA library. This data will be stored in the <code>Final_sgRNA_count.csv</code>:
-
 <code>python sgRNA_count.py</code>
+
 
 
